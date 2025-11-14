@@ -1,8 +1,7 @@
-import axios from "axios";
+import axios, { all } from "axios";
 
 export const getProperties = async () => {
-    const res = await axios.get("https://airbnc-oijh.onrender.com/properties");
-
-    console.log(res);
-    return res;
+    const { data: {properties: allProperties} } = await axios.get("https://airbnc-oijh.onrender.com/api/properties");
+  
+    return allProperties;
 };

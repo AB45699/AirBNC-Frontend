@@ -1,18 +1,41 @@
 import {getProperties} from "../../api.js";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 function PropertiesGrid() {
-    const [properties, setProperties] = useState([]);
+    const [allProperties, setAllProperties] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+    const [hasErrored, setHasErrored] = useState(null);
 
     const fetchProperties = async () => {
-        const properties = await getProperties();
-        setProperties(properties); 
-        console.log(properties)
-    }
+        try {
+            const fetchedProperties = await getProperties();
+            setAllProperties(fetchedProperties); 
+            setIsLoading(false);
+        } catch (err) {
+            setHasErrored(err);
+            setIsLoading(false);
+        }
+        
+    };
+
+    useEffect(()=>{
+        fetchProperties();
+    }, [])
 
     return (
-        <button onClick={fetchProperties}>push me</button>
-        
+        <>
+        {isLoading ? <p>loading...</p> : <ul>
+        {allProperties.map((property) => {
+            return (
+                <li key={property.property_id}>
+                    {property.property_name}
+                </li>
+            )
+        })}
+       </ul>}
+       
+        </>
+         
     )
 };
 
