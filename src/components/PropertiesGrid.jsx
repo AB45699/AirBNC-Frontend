@@ -1,4 +1,5 @@
 import {getProperties} from "../../api.js";
+import PropertyCard from "./PropertyCard.jsx";
 import {useEffect, useState} from "react";
 
 function PropertiesGrid() {
@@ -22,19 +23,16 @@ function PropertiesGrid() {
         fetchProperties();
     }, [])
 
+    if (isLoading) {
+        return <p>loading...</p>
+    }
+
     return (
-        <>
-        {isLoading ? <p>loading...</p> : <ul>
-        {allProperties.map((property) => {
-            return (
-                <li key={property.property_id}>
-                    {property.property_name}
-                </li>
-            )
-        })}
-       </ul>}
-       
-        </>
+        <section className="property-cards-container">
+            {allProperties.map((property) => {
+                return <PropertyCard key={property.property_id} property={property}/>
+            })}
+        </section>
          
     )
 };

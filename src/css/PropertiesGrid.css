@@ -1,0 +1,17 @@
+.property-cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+    row-gap: 70px;
+    column-gap: -5px;
+}
+
+
+.property-card {
+    border-color: purple;
+    border-style: solid;
+    width: 125px;
+    height: 108px;
+    padding: 20px;
+    border-radius: 35px;
+}

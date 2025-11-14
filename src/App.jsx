@@ -1,10 +1,10 @@
 import './App.css';
-import PropertiesGrid from './components/PropertiesGrid.jsx';
+import AllPropertiesPage from './components/AllPropertiesPage.jsx';
 
 function App() {
 
   return (
-    <PropertiesGrid />
+    <AllPropertiesPage />
   )
 }
 
