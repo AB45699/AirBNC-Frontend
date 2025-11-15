@@ -1,0 +1,19 @@
+.logo {
+    height: 60px;
+}
+
+.header {
+    border-style: solid;
+    border-color: black;
+    display: flex;
+}
+
+.search-bar {
+    border-style: solid;
+    border-color: black;
+    border-radius: 30px;
+    padding: 10px;
+    margin: 5px;
+    flex: 1;
+    display: flex;
+}

@@ -1,0 +1,8 @@
+.filter-options {
+ border-style: solid;
+    border-color: black;
+    border-radius: 30px;
+    display: flex;
+    flex: 1;
+};
+
