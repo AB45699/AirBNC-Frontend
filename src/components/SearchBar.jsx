@@ -1,22 +1,26 @@
-import styles from '../css/Shared.module.css';
-import { useState } from 'react';
 import SortByDropdown from './SortByDropdown.jsx';
+import {useState} from 'react'; 
+import FilterMenuModal from './FilterMenuModal.jsx';
+
 
 function SearchBar() { 
-    const [sortByIsOpen, setSortByIsOpen] = useState(false);
+    const [modalIsOpen, setModalIsOpen] = useState(false);
 
-    const openSortBy = () => {
-        setSortByIsOpen(true);
+    function openModal() {
+        setModalIsOpen(true);
     }
 
     return (
         <div className="search-bar">
-            {!sortByIsOpen ? <button className={styles[`filter-options`]} onClick={openSortBy} type="button">
-                Sort by
-            </button> : <SortByDropdown />}
-            <div className={styles[`filter-options`]}>
+            <SortByDropdown />
+
+            {!modalIsOpen ? <button className="filter-option" type="button" onClick={openModal}>
                 Filter
-            </div>
+                </button> : 
+                
+                <FilterMenuModal 
+                    modalIsOpen={modalIsOpen} 
+                    setModalIsOpen={setModalIsOpen}/>} 
         </div>
     )
 };

@@ -17,3 +17,21 @@
     flex: 1;
     display: flex;
 }
+
+.filter-option {
+    border-style: solid;
+    border-color: black;
+    border-radius: 30px;
+    display: flex;
+    flex: 1;
+}
+
+.filter-menu-modal {
+    color: red;
+    
+}
+
+/* @keyframes slide-modal-left {
+    from {right: -100%}; 
+    to {right: 0}
+} */
