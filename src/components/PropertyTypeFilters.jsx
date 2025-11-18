@@ -1,5 +1,6 @@
 function PropertyTypeFilters() {
     const propertyTypes = ["Apartment", "House", "Studio", "Loft", "Villa", "Cottage", "Chalet", "Cabin", "Mansion", "Castle", "Bungalow", "Townhouse", "Penthouse", "Duplex"]
+    
     return (
         <div className="property-type-filter-container">
             <p>Property types</p>

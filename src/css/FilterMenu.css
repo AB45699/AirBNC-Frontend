@@ -1,5 +1,4 @@
 .filter-menu-modal {
-    color: red;
     position: fixed;
     top: 0;
     right: 0;
@@ -9,11 +8,31 @@
     box-shadow: -4px 0 20px rgba(0,0,0,0.3);
     overflow: scroll;
 }
+
+.close-modal-button {
+    margin: 10px;
+}
+.apply-filters-button {
+    position: absolute;       
+    bottom: 20px;             
+    left: 50%;                
+    transform: translateX(-50%);
+    width: 90%;
+    padding: 0px;
+    height: 25px;
+}
  
 .property-type-filter-container {
-    padding: 10px;
+    padding: 15px;
     display: flex;
     flex-direction: column;
+    text-align: center;
+}
+
+.property-type-filter-container > p {
+    color: rgb(44, 44, 50);
+    font-weight: bold;
+    font-family: Helvetica;
 }
 
 .property-type-option-selector {
@@ -21,5 +40,7 @@
     background-color: transparent;
     border: none;
     border-bottom: 1px solid rgb(192, 187, 187);
+    border-image: linear-gradient(to right, #cdcaca, #a19e9e, #cdcaca) 1;
+    text-align: left;
 
 }
