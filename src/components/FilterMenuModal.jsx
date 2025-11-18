@@ -16,8 +16,9 @@ function FilterMenuModal( {modalIsOpen, setModalIsOpen} ) {
         >
         <Slide direction="left" in={modalIsOpen} mountOnEnter unmountOnExit>
         <div className="filter-menu-modal">
+        <button onClick={closeModal} className="close-modal-button">Close</button>
             <PropertyTypeFilters />
-        <button onClick={closeModal}>Close</button>
+        <button className="apply-filters-button">Apply filters</button>
             </div>
         </Slide>
     
