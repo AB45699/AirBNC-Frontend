@@ -1,6 +1,7 @@
 import Modal from '@mui/material/Modal';
-import '../css/Header.css';
+import '../css/FilterMenu.css';
 import Slide from '@mui/material/Slide';
+import PropertyTypeFilters from './PropertyTypeFilters';
 
 function FilterMenuModal( {modalIsOpen, setModalIsOpen} ) {
 
@@ -9,23 +10,18 @@ function FilterMenuModal( {modalIsOpen, setModalIsOpen} ) {
     }
 
     return (
-        
         <Modal 
         open={modalIsOpen}
         onClose={closeModal}
-        keepMounted>
-             
-
-            <Slide direction="up" in={modalIsOpen} mountOnEnter unmountOnExit>
-            <div className="filter-menu-modal">
-                
-                <p>modal open</p>
-           
-            <button onClick={closeModal}>Close</button>
-             </div>
-            </Slide>
-       
-          </Modal>
+        >
+        <Slide direction="left" in={modalIsOpen} mountOnEnter unmountOnExit>
+        <div className="filter-menu-modal">
+            <PropertyTypeFilters />
+        <button onClick={closeModal}>Close</button>
+            </div>
+        </Slide>
+    
+        </Modal>
     )
 }; 
 

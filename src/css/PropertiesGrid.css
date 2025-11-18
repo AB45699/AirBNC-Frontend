@@ -1,8 +1,9 @@
 .property-cards-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     padding: 20px;
-    row-gap: 20px;
+    column-gap: 17px;
+    row-gap: 17px;
     place-items: center;
 }
 
@@ -10,8 +11,8 @@
 .property-card {
     border-color: purple;
     border-style: solid;
-    width: 150px;
-    height: 200px;
+    width: 100px;
+    height: 160px;
     padding: 20px;
     border-radius: 35px;
 }
