@@ -12,6 +12,9 @@ function PropertyTypeFilters() {
                     {propertyType}
                     </button>
             })}
+
+            <button className="apply-filters-button">Apply</button>
+   
         </div>
     )
 }; 

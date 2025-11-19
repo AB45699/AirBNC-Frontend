@@ -12,14 +12,14 @@
 .close-modal-button {
     margin: 10px;
 }
+
 .apply-filters-button {
-    position: absolute;       
-    bottom: 20px;             
+    position: sticky;                    
     left: 50%;                
-    transform: translateX(-50%);
+    transform: translateX(-3%);
     width: 90%;
-    padding: 0px;
     height: 25px;
+    margin: 10px;
 }
  
 .property-type-filter-container {
@@ -43,4 +43,9 @@
     border-image: linear-gradient(to right, #cdcaca, #a19e9e, #cdcaca) 1;
     text-align: left;
 
+}
+
+.price-range-slider-container {
+    margin: 10px;
+    justify-items: center;
 }
