@@ -1,8 +1,8 @@
 import PropertiesGrid from "./PropertiesGrid.jsx";
 
-function AllPropertiesPage() {
+function AllPropertiesPage( {searchParams, setSearchParams} ) {
     return (
-        <PropertiesGrid />
+        <PropertiesGrid searchParams={searchParams} setSearchParams={setSearchParams}/>
     )
 };
 

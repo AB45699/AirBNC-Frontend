@@ -3,7 +3,7 @@ import {useState} from 'react';
 import FilterMenuModal from './FilterMenuModal.jsx';
 
 
-function SearchBar() { 
+function SearchBar({searchParams, setSearchParams}) { 
     const [modalIsOpen, setModalIsOpen] = useState(false);
 
     function openModal() {
@@ -12,7 +12,7 @@ function SearchBar() {
 
     return (
         <div className="search-bar">
-            <SortByDropdown />
+            <SortByDropdown searchParams={searchParams} setSearchParams={setSearchParams} />
 
             {!modalIsOpen ? <button className="filter-option" type="button" onClick={openModal}>
                 Filter

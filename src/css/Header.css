@@ -27,13 +27,3 @@
     flex: 1;
 }
 
-.filter-menu-modal {
-    color: red;
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;  
-    width: 80vw;     
-    background: white;
-    box-shadow: -4px 0 20px rgba(0,0,0,0.3);
-}

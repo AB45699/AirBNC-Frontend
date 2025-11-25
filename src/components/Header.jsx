@@ -2,11 +2,11 @@ import '../css/Header.css';
 import airbnb_logo from '../assets/airbnb_logo.png';
 import SearchBar from './SearchBar.jsx';
 
-function Header() {
+function Header( {searchParams, setSearchParams} ) {
     return (
         <header className="header">
             <img className="logo" src={airbnb_logo} alt="logo"/>
-            <SearchBar />
+            <SearchBar searchParams={searchParams} setSearchParams={setSearchParams}/>
         </header>
     )
 };
