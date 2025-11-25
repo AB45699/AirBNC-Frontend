@@ -36,7 +36,7 @@ function SortByDropdown({searchParams, setSearchParams}) {
            <MenuItem value={"Price low"} onClick={() => setSortOrder("asc", "price_per_night")}>Price: Low → High</MenuItem>
            <MenuItem value={"Price high"}>Price:  High → Low</MenuItem>
            <MenuItem value={"Most popular"} onClick={() => setSortOrder("asc", "popularity")}>Most popular</MenuItem>
-           <MenuItem value={"Least popular"}>Least popular</MenuItem>
+           <MenuItem value={"Least popular"}>Least popular </MenuItem>
 
         </Select>
       </FormControl>
