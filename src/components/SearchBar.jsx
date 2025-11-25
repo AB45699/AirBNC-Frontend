@@ -20,7 +20,9 @@ function SearchBar({searchParams, setSearchParams}) {
                 
                 <FilterMenuModal 
                     modalIsOpen={modalIsOpen} 
-                    setModalIsOpen={setModalIsOpen}/>} 
+                    setModalIsOpen={setModalIsOpen}
+                    searchParams={searchParams} 
+                    setSearchParams={setSearchParams}/>} 
         </div>
     )
 };

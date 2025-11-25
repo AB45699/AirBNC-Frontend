@@ -8,11 +8,11 @@ function PropertiesGrid({searchParams, setSearchParams}) {
     const [hasErrored, setHasErrored] = useState(null);
     const orderQuery = searchParams.get("order");
     const sortByQuery = searchParams.get("sort");
+    const propertyTypeQuery = searchParams.get("property_type");
  
     const fetchProperties = async (orderQuery, sortByQuery) => {
         try {
-            const fetchedProperties = await getProperties(orderQuery, sortByQuery);
-            console.log(fetchedProperties);
+            const fetchedProperties = await getProperties(orderQuery, sortByQuery, propertyTypeQuery);
             setAllProperties(fetchedProperties); 
             setIsLoading(false);
         } catch (err) {
@@ -23,14 +23,8 @@ function PropertiesGrid({searchParams, setSearchParams}) {
     };
 
     useEffect(()=>{
-        fetchProperties(orderQuery, sortByQuery);
-        console.log(orderQuery, "order query", sortByQuery, "sort query")
-    }, [orderQuery, sortByQuery])
-
-    //  useEffect(()=>{
-    //     fetchProperties(orderQuery);
-    //     console.log(orderQuery, "order query")
-    // }, [orderQuery])
+        fetchProperties(orderQuery, sortByQuery, propertyTypeQuery);
+    }, [orderQuery, sortByQuery, propertyTypeQuery])
 
     if (isLoading) {
         return <p>loading...</p>

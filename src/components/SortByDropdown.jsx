@@ -18,8 +18,6 @@ function SortByDropdown({searchParams, setSearchParams}) {
         setSearchParams(newParams)
     }
 
-    console.log(searchParams.get("order"))
-
     return (
         
             <FormControl sx={{ m: 1, minWidth: 120 }} size="small">

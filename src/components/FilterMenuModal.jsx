@@ -4,7 +4,7 @@ import Slide from '@mui/material/Slide';
 import PropertyTypeFilters from './PropertyTypeFilters';
 import PriceRangeSlider from './PriceRangeSlider';
 
-function FilterMenuModal( {modalIsOpen, setModalIsOpen} ) {
+function FilterMenuModal( {modalIsOpen, setModalIsOpen, searchParams, setSearchParams} ) {
 
     function closeModal() {
         setModalIsOpen(false);
@@ -19,7 +19,9 @@ function FilterMenuModal( {modalIsOpen, setModalIsOpen} ) {
         <div className="filter-menu-modal">
         <button onClick={closeModal} className="close-modal-button">Close</button>
             <PriceRangeSlider/>
-            <PropertyTypeFilters />
+            <PropertyTypeFilters 
+            searchParams={searchParams} 
+            setSearchParams={setSearchParams}/>
           
             </div>
         </Slide>
