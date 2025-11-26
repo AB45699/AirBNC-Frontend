@@ -9,10 +9,12 @@ function PropertiesGrid({searchParams, setSearchParams}) {
     const orderQuery = searchParams.get("order");
     const sortByQuery = searchParams.get("sort");
     const propertyTypeQuery = searchParams.get("property_type");
+    const minPriceQuery = searchParams.get("minprice");
+    const maxPriceQuery = searchParams.get("maxprice");
  
     const fetchProperties = async (orderQuery, sortByQuery) => {
         try {
-            const fetchedProperties = await getProperties(orderQuery, sortByQuery, propertyTypeQuery);
+            const fetchedProperties = await getProperties(orderQuery, sortByQuery, propertyTypeQuery, minPriceQuery, maxPriceQuery);
             setAllProperties(fetchedProperties); 
             setIsLoading(false);
         } catch (err) {
@@ -23,8 +25,8 @@ function PropertiesGrid({searchParams, setSearchParams}) {
     };
 
     useEffect(()=>{
-        fetchProperties(orderQuery, sortByQuery, propertyTypeQuery);
-    }, [orderQuery, sortByQuery, propertyTypeQuery])
+        fetchProperties(orderQuery, sortByQuery, propertyTypeQuery, minPriceQuery, maxPriceQuery);
+    }, [orderQuery, sortByQuery, propertyTypeQuery, minPriceQuery, maxPriceQuery])
 
     if (isLoading) {
         return <p>loading...</p>

@@ -2,11 +2,12 @@ import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
 import {useState} from 'react';
 
-function PriceRangeSlider() {
+function PriceRangeSlider({searchParams, setSearchParams, priceQuery, setPriceQuery}) {
     const [priceValues, setPriceValues] = useState([0, 550])
 
     const handleChange = (event, newValue) => {
         setPriceValues(newValue)
+        setPriceQuery(priceValues)
     }
 
     return (
