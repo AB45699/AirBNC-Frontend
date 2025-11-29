@@ -41,11 +41,20 @@ position: sticky;
     border: none;
     border-bottom: 1px solid rgb(192, 187, 187);
     border-image: linear-gradient(to right, #cdcaca, #a19e9e, #cdcaca) 1;
-    text-align: left;
+    text-align: left;   
+}
 
+.property-type-option-selector.selected {
+    font-weight: bold;
 }
 
 .price-range-slider-container {
     margin: 10px;
     justify-items: center;
+}
+
+.tick {
+    height: 15px;
+    float: right;
+    padding-right: 10px;
 }

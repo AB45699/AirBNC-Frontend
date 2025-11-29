@@ -5,6 +5,7 @@ import FilterMenuModal from './FilterMenuModal.jsx';
 
 function SearchBar({searchParams, setSearchParams}) { 
     const [modalIsOpen, setModalIsOpen] = useState(false);
+    const [propertyTypeQuery, setPropertyTypeQuery] = useState(null);
 
     function openModal() {
         setModalIsOpen(true);
@@ -23,7 +24,9 @@ function SearchBar({searchParams, setSearchParams}) {
                     modalIsOpen={modalIsOpen} 
                     setModalIsOpen={setModalIsOpen}
                     searchParams={searchParams} 
-                    setSearchParams={setSearchParams}/>
+                    setSearchParams={setSearchParams}
+                    propertyTypeQuery={propertyTypeQuery}
+                    setPropertyTypeQuery={setPropertyTypeQuery}/>
                     
                       
                     

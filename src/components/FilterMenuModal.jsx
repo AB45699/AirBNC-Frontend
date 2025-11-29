@@ -5,8 +5,7 @@ import PropertyTypeFilters from './PropertyTypeFilters';
 import PriceRangeSlider from './PriceRangeSlider';
 import {useState} from 'react';
 
-function FilterMenuModal( {modalIsOpen, setModalIsOpen, searchParams, setSearchParams} ) {
-    const [propertyTypeQuery, setPropertyTypeQuery] = useState(null);
+function FilterMenuModal( {modalIsOpen, setModalIsOpen, searchParams, setSearchParams, propertyTypeQuery, setPropertyTypeQuery} ) {
     const [priceQuery, setPriceQuery] = useState([0, 550]);
 
     function closeModal() {
@@ -32,7 +31,8 @@ function FilterMenuModal( {modalIsOpen, setModalIsOpen, searchParams, setSearchP
         <button onClick={closeModal} className="close-modal-button">Close</button>
             <PriceRangeSlider 
             setPriceQuery={setPriceQuery}/>
-            <PropertyTypeFilters 
+            <PropertyTypeFilters
+            propertyTypeQuery={propertyTypeQuery} 
             setPropertyTypeQuery={setPropertyTypeQuery}/>
           
           <div className="apply-filters-button-container">

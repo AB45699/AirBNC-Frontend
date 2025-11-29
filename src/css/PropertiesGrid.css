@@ -16,3 +16,8 @@
     padding: 20px;
     border-radius: 35px;
 }
+
+.property-image-card {
+    height: 75px;
+    border-radius: 10px;
+}

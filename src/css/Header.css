@@ -10,9 +10,6 @@
 }
 
 .search-bar {
-    border-style: solid;
-    border-color: black;
-    border-radius: 30px;
     padding: 10px;
     margin: 5px;
     flex: 1;
@@ -22,7 +19,6 @@
 .filter-option {
     border-style: solid;
     border-color: black;
-    border-radius: 30px;
     display: flex;
     flex: 1;
 }
@@ -30,4 +26,5 @@
 .MuiFormControl-root {
     display: flex;
     flex:1
-};
+}
+
