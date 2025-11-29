@@ -1,4 +1,4 @@
-function PropertyTypeFilters({searchParams, setSearchParams, propertyTypeQuery, setPropertyTypeQuery}) {
+function PropertyTypeFilters({setPropertyTypeQuery}) {
     const propertyTypes = ["Apartment", "House", "Studio", "Loft", "Villa", "Cottage", "Chalet", "Cabin", "Mansion", "Castle", "Bungalow", "Townhouse", "Penthouse", "Duplex"]
   
 

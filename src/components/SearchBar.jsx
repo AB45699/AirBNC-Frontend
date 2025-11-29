@@ -18,11 +18,16 @@ function SearchBar({searchParams, setSearchParams}) {
                 Filter
                 </button> : 
                 
+                
                 <FilterMenuModal 
                     modalIsOpen={modalIsOpen} 
                     setModalIsOpen={setModalIsOpen}
                     searchParams={searchParams} 
-                    setSearchParams={setSearchParams}/>} 
+                    setSearchParams={setSearchParams}/>
+                    
+                      
+                    
+                    } 
         </div>
     )
 };

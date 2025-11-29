@@ -27,3 +27,7 @@
     flex: 1;
 }
 
+.MuiFormControl-root {
+    display: flex;
+    flex:1
+};

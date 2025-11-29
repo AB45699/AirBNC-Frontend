@@ -13,11 +13,11 @@
     margin: 10px;
 }
 
+.apply-filters-button-container {
+position: sticky; 
+}
 .apply-filters-button {
-    position: sticky;                    
-    left: 50%;                
-    transform: translateX(-3%);
-    width: 90%;
+    width: 93%;
     height: 25px;
     margin: 10px;
 }

@@ -31,17 +31,13 @@ function FilterMenuModal( {modalIsOpen, setModalIsOpen, searchParams, setSearchP
         <div className="filter-menu-modal">
         <button onClick={closeModal} className="close-modal-button">Close</button>
             <PriceRangeSlider 
-            searchParams={searchParams} 
-            setSearchParams={setSearchParams}
-            priceQuery={priceQuery}
             setPriceQuery={setPriceQuery}/>
             <PropertyTypeFilters 
-            searchParams={searchParams} 
-            setSearchParams={setSearchParams}
-            propertyTypeQuery={propertyTypeQuery}
             setPropertyTypeQuery={setPropertyTypeQuery}/>
           
-          <button className="apply-filters-button" onClick={()=>{setFilterQueries(propertyTypeQuery, priceQuery)}}>new button</button>
+          <div className="apply-filters-button-container">
+          <button className="apply-filters-button" onClick={()=>{setFilterQueries(propertyTypeQuery, priceQuery)}}>Apply filters</button>
+            </div>
             </div>
         </Slide>
     
