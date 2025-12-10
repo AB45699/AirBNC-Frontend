@@ -1,6 +1,6 @@
 import './App.css';
-import Header from './components/Header.jsx';
-import AllPropertiesPage from './components/AllPropertiesPage.jsx';
+import Header from './components/filter-options/header/Header.jsx';
+import AllPropertiesPage from './components/properties-grid/AllPropertiesPage.jsx';
 import { useSearchParams } from 'react-router-dom';
 
 function App() {

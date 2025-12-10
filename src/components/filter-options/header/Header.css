@@ -4,8 +4,6 @@
 }
 
 .header {
-    border-style: solid;
-    border-color: black;
     display: flex;
 }
 

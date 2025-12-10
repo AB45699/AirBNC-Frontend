@@ -1,4 +1,4 @@
-import checkmark from '../assets/check.png';
+import checkmark from '../../assets/check.png';
 
 function PropertyTypeFilters({propertyTypeQuery, setPropertyTypeQuery}) {
     const propertyTypes = ["Apartment", "House", "Studio", "Loft", "Villa", "Cottage", "Chalet", "Cabin", "Mansion", "Castle", "Bungalow", "Townhouse", "Penthouse", "Duplex"]

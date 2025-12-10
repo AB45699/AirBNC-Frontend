@@ -1,4 +1,4 @@
-import {getProperties} from "../../api.js";
+import {getProperties} from "../../../api.js";
 import PropertyCard from "./PropertyCard.jsx";
 import {useEffect, useState} from "react";
 

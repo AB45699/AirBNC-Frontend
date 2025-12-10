@@ -1,6 +1,6 @@
-import SortByDropdown from './SortByDropdown.jsx';
+import SortByDropdown from '../SortByDropdown.jsx';
 import {useState} from 'react'; 
-import FilterMenuModal from './FilterMenuModal.jsx';
+import FilterMenuModal from '../FilterMenuModal.jsx';
 
 
 function SearchBar({searchParams, setSearchParams}) { 

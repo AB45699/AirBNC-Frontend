@@ -1,5 +1,5 @@
-import '../css/Header.css';
-import airbnb_logo from '../assets/airbnb_logo.png';
+import './Header.css';
+import airbnb_logo from '../../../assets/airbnb_logo.png';
 import SearchBar from './SearchBar.jsx';
 
 function Header( {searchParams, setSearchParams} ) {

@@ -1,8 +1,8 @@
 import Modal from '@mui/material/Modal';
-import '../css/FilterMenu.css';
+import './FilterMenu.css';
 import Slide from '@mui/material/Slide';
-import PropertyTypeFilters from './PropertyTypeFilters';
-import PriceRangeSlider from './PriceRangeSlider';
+import PropertyTypeFilters from './PropertyTypeFilters.jsx';
+import PriceRangeSlider from './PriceRangeSlider.jsx';
 import {useState} from 'react';
 
 function FilterMenuModal( {modalIsOpen, setModalIsOpen, searchParams, setSearchParams, propertyTypeQuery, setPropertyTypeQuery} ) {

@@ -1,4 +1,4 @@
-import "../css/PropertiesGrid.css";
+import "./PropertiesGrid.css";
 
 function PropertyCard( {property} ) {
     return (
