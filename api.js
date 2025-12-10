@@ -5,12 +5,14 @@ export const getProperties = async (orderQuery, sortByQuery, propertyTypeQuery, 
    
     const { data: {properties: allProperties} } = await axios.get(allPropertiesURL, 
         {params:
-            {order: orderQuery,
+            {
+                order: orderQuery,
                 sort: sortByQuery,
                 property_type: propertyTypeQuery, 
                 minprice: minPriceQuery, 
                 maxprice: maxPriceQuery
-            }}
+            }
+        }
     );
   
     return allProperties;
