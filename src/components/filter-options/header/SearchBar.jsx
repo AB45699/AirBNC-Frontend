@@ -16,8 +16,8 @@ function SearchBar({searchParams, setSearchParams}) {
             <SortByDropdown searchParams={searchParams} setSearchParams={setSearchParams} />
 
             {!modalIsOpen ? <button className="filter-option" type="button" onClick={openModal}>
-                Filter
-                </button> : 
+                Filter  
+            </button> : 
                 
                 
                 <FilterMenuModal 
