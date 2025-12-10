@@ -2,17 +2,18 @@ import {getProperties} from "../../../api.js";
 import PropertyCard from "./PropertyCard.jsx";
 import {useEffect, useState} from "react";
 
-function PropertiesGrid({searchParams, setSearchParams}) {
+function PropertiesGrid({searchParams}) {
     const [allProperties, setAllProperties] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [hasErrored, setHasErrored] = useState(null);
+
     const orderQuery = searchParams.get("order");
     const sortByQuery = searchParams.get("sort");
     const propertyTypeQuery = searchParams.get("property_type");
     const minPriceQuery = searchParams.get("minprice");
     const maxPriceQuery = searchParams.get("maxprice");
  
-    const fetchProperties = async (orderQuery, sortByQuery) => {
+    const fetchProperties = async () => {
         try {
             const fetchedProperties = await getProperties(orderQuery, sortByQuery, propertyTypeQuery, minPriceQuery, maxPriceQuery);
             setAllProperties(fetchedProperties); 
@@ -29,7 +30,7 @@ function PropertiesGrid({searchParams, setSearchParams}) {
     }, [orderQuery, sortByQuery, propertyTypeQuery, minPriceQuery, maxPriceQuery])
 
     if (isLoading) {
-        return <p>loading...</p>
+        return <p>Loading...</p>
     }
 
     return (
