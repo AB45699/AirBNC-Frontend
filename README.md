@@ -29,7 +29,7 @@ Further features include:
 
 * useSearchParams is used to store and update filter values. 
 
-* Implement Axios' params option to send the current filter values as query parameters. 
+* Implemented Axios' params option to send the current filter values as query parameters. 
 
 * Filter changes instantly update the displayed results, without needing to reload the page! 
 
