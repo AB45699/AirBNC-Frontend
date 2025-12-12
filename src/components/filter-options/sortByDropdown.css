@@ -1,0 +1,14 @@
+
+.MuiInputBase-root.MuiOutlinedInput-root.MuiSelect-root,
+.MuiButtonBase-root.MuiMenuItem-root {
+    font-size: 14px;
+}
+
+.MuiSelect-root {
+    height: 30px;
+}
+
+.MuiFormControl-root {
+    display: flex;
+    flex:1
+}
