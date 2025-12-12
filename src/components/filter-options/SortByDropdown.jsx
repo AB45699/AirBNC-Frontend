@@ -30,9 +30,7 @@ function SortByDropdown({searchParams, setSearchParams}) {
 
     return (
       <FormControl sx={{ width: 100 }} size="small">
-        <InputLabel id="sort-by-select-label">
-            Sort
-        </InputLabel>
+        <InputLabel id="sort-by-select-label">Sort</InputLabel>
         <Select
           labelId="sort-by-select-label"
           id="sort-by-select"
@@ -43,11 +41,11 @@ function SortByDropdown({searchParams, setSearchParams}) {
 
           {sortOptions.map((sortOption)=>(
             <MenuItem
-            key={sortOption.key}
-            value={sortOption.value}
-            onClick={()=>setSortOrder(sortOption.order, sortOption.sortBy)}
+              key={sortOption.key}
+              value={sortOption.value}
+              onClick={()=>setSortOrder(sortOption.order, sortOption.sortBy)}
             >
-              {sortOption.label}
+            {sortOption.label}
             </MenuItem>
           ))}
   
