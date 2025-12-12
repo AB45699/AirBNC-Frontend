@@ -9,13 +9,26 @@
     overflow: scroll;
 }
 
+@media (min-width: 600px) {
+    .filter-menu-modal {
+        width: 50vw;
+    }
+}
+
+@media (min-width: 1000px) {
+    .filter-menu-modal {
+        width: 30vw;
+    }
+}
+
 .close-modal-button {
     margin: 10px;
 }
 
 .apply-filters-button-container {
-position: sticky; 
+    position: sticky; 
 }
+
 .apply-filters-button {
     width: 93%;
     height: 25px;
@@ -33,15 +46,7 @@ position: sticky;
     color: rgb(44, 44, 50);
     font-weight: bold;
     font-family: Helvetica;
-}
-
-.property-type-option-selector {
-    height: 40px;
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid rgb(192, 187, 187);
-    border-image: linear-gradient(to right, #cdcaca, #a19e9e, #cdcaca) 1;
-    text-align: left;   
+    margin-top: 0px;
 }
 
 .property-type-option-selector.selected {
@@ -49,12 +54,71 @@ position: sticky;
 }
 
 .price-range-slider-container {
-    margin: 10px;
+    margin-top: 20px;
     justify-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 .tick {
     height: 15px;
     float: right;
     padding-right: 10px;
+}
+
+.MuiSlider-root {
+    margin-bottom: 25px;
+}
+
+.MuiSlider-track, .MuiSlider-thumb {
+    color: #FF5A5F;
+}
+
+.MuiSlider-valueLabelCircle {
+    background-color: transparent;
+}
+
+.MuiSlider-valueLabelLabel {
+    color: black;
+}
+
+.MuiSlider-valueLabel.MuiSlider-valueLabelOpen {
+    background-color: transparent;
+    margin-top: 7px;
+}
+
+.property-type-option-selector {
+    height: 35px;
+    background-color: transparent;
+    border-style: solid; 
+    border-color: rgb(158, 184, 214);
+    text-align: left;   
+    border-radius: 20px;
+    margin-bottom: 10px;
+    padding: 9px;
+    border-width: 1.5px;
+}
+
+.apply-filters-button {
+    height: 35px;
+    background-color: transparent;
+    border-style: solid; 
+    border-color: #FF5A5F;  
+    border-radius: 20px;
+    margin-top: -5px;
+    border-width: 1.5px;
+}
+
+.close-modal-button {
+    display: flex;
+    height: 35px;
+    width: 40px;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border-style: none;
+    
+}
+
+.close-icon {
+    height: 30px;
 }

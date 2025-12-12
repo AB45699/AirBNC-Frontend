@@ -12,14 +12,15 @@ function PriceRangeSlider({setPriceQuery}) {
 
     return (
         <div className="price-range-slider-container">
-        <Box sx={{width: 250}}>
-            <Slider
-                value={priceValues}
-                onChange={handleChange}
-                min={0}
-                max={550}
-                valueLabelDisplay='on'/>
-        </Box>
+            <Box sx={{width: 250}}>
+                <Slider
+                    value={priceValues}
+                    onChange={handleChange}
+                    min={0}
+                    max={550}
+                    valueLabelDisplay='on'
+                    aria-label="price range"/>
+            </Box>
         </div>
     )
 }

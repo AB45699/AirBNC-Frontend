@@ -4,42 +4,47 @@ import Slide from '@mui/material/Slide';
 import PropertyTypeFilters from './PropertyTypeFilters.jsx';
 import PriceRangeSlider from './PriceRangeSlider.jsx';
 import {useState} from 'react';
+import closeButton from '../../assets/close-button.png';
 
-function FilterMenuModal( {modalIsOpen, setModalIsOpen, searchParams, setSearchParams, propertyTypeQuery, setPropertyTypeQuery} ) {
+function FilterMenuModal( {isModalOpen, setIsModalOpen, searchParams, setSearchParams, propertyTypeQuery, setPropertyTypeQuery} ) {
     const [priceQuery, setPriceQuery] = useState([0, 550]);
 
     function closeModal() {
-        setModalIsOpen(false);
+        setIsModalOpen(false);
     };
 
     const setFilterQueries = (propertyTypeQuery, priceQuery) => {
-        const newParams = new URLSearchParams(searchParams)
-        {propertyTypeQuery ? newParams.set("property_type", propertyTypeQuery) : null}
-        newParams.set("minprice", priceQuery[0])
-        newParams.set("maxprice", priceQuery[1])
-        setSearchParams(newParams)
-        closeModal()
+        const newParams = new URLSearchParams(searchParams);
+
+        {propertyTypeQuery ? newParams.set("property_type", propertyTypeQuery) : null};
+        newParams.set("minprice", priceQuery[0]);
+        newParams.set("maxprice", priceQuery[1]);
+
+        setSearchParams(newParams);
+        closeModal();
     };
 
     return (
         <Modal 
-        open={modalIsOpen}
-        onClose={closeModal}
-        >
-        <Slide direction="left" in={modalIsOpen} mountOnEnter unmountOnExit>
-        <div className="filter-menu-modal">
-        <button onClick={closeModal} className="close-modal-button">Close</button>
-            <PriceRangeSlider 
-            setPriceQuery={setPriceQuery}/>
-            <PropertyTypeFilters
-            propertyTypeQuery={propertyTypeQuery} 
-            setPropertyTypeQuery={setPropertyTypeQuery}/>
-          
-          <div className="apply-filters-button-container">
-          <button className="apply-filters-button" onClick={()=>{setFilterQueries(propertyTypeQuery, priceQuery)}}>Apply filters</button>
-            </div>
-            </div>
-        </Slide>
+            open={isModalOpen}
+            onClose={closeModal} > 
+
+            <Slide direction="left" in={isModalOpen} mountOnEnter unmountOnExit>
+                <div className="filter-menu-modal">
+                    <button className="close-modal-button" onClick={closeModal} >
+                        <img className="close-icon" src={closeButton} alt="close=button"/>
+                    </button>
+                    <PriceRangeSlider 
+                        setPriceQuery={setPriceQuery}/>
+                    <PropertyTypeFilters
+                        propertyTypeQuery={propertyTypeQuery} 
+                        setPropertyTypeQuery={setPropertyTypeQuery}/>
+            
+                    <div className="apply-filters-button-container">
+                        <button className="apply-filters-button" onClick={()=>{setFilterQueries(propertyTypeQuery, priceQuery)}}>Apply filters</button>
+                    </div>
+                </div>
+            </Slide>
     
         </Modal>
     )
