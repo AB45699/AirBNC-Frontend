@@ -4,25 +4,25 @@ import FilterMenuModal from '../FilterMenuModal.jsx';
 
 
 function SearchBar({searchParams, setSearchParams}) { 
-    const [modalIsOpen, setModalIsOpen] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false);
     const [propertyTypeQuery, setPropertyTypeQuery] = useState(null);
 
     function openModal() {
-        setModalIsOpen(true);
+        setIsModalOpen(true);
     }
 
     return (
         <div className="search-bar">
             <SortByDropdown searchParams={searchParams} setSearchParams={setSearchParams} />
 
-            {!modalIsOpen ? <button className="filter-option" type="button" onClick={openModal}>
+            {!isModalOpen ? <button className="filter-option" type="button" onClick={openModal}>
                 Filter  
             </button> : 
                 
                 
                 <FilterMenuModal 
-                    modalIsOpen={modalIsOpen} 
-                    setModalIsOpen={setModalIsOpen}
+                    isModalOpen={isModalOpen} 
+                    setIsModalOpen={setIsModalOpen}
                     searchParams={searchParams} 
                     setSearchParams={setSearchParams}
                     propertyTypeQuery={propertyTypeQuery}
