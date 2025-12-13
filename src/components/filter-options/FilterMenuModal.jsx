@@ -27,22 +27,27 @@ function FilterMenuModal( {isModalOpen, setIsModalOpen, searchParams, setSearchP
     return (
         <Modal 
             open={isModalOpen}
-            onClose={closeModal} > 
+            onClose={closeModal} 
+            > 
 
             <Slide direction="left" in={isModalOpen} mountOnEnter unmountOnExit>
+
                 <div className="filter-menu-modal">
                     <button className="close-modal-button" onClick={closeModal} >
                         <img className="close-icon" src={closeButton} alt="close=button"/>
                     </button>
+
                     <PriceRangeSlider 
                         setPriceQuery={setPriceQuery}/>
+
                     <PropertyTypeFilters
                         propertyTypeQuery={propertyTypeQuery} 
                         setPropertyTypeQuery={setPropertyTypeQuery}/>
             
-                    <div className="apply-filters-button-container">
-                        <button className="apply-filters-button" onClick={()=>{setFilterQueries(propertyTypeQuery, priceQuery)}}>Apply filters</button>
-                    </div>
+                    <button className="apply-filters-button" onClick={()=>{setFilterQueries(propertyTypeQuery, priceQuery)}}>
+                        Apply filters
+                    </button>
+                
                 </div>
             </Slide>
     

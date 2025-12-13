@@ -1,6 +1,7 @@
 import SortByDropdown from '../SortByDropdown.jsx';
 import {useState} from 'react'; 
 import FilterMenuModal from '../FilterMenuModal.jsx';
+import './Header.css';
 
 
 function SearchBar({searchParams, setSearchParams}) { 
@@ -9,7 +10,7 @@ function SearchBar({searchParams, setSearchParams}) {
 
     function openModal() {
         setIsModalOpen(true);
-    }
+    };
 
     return (
         <div className="search-bar">
@@ -19,18 +20,14 @@ function SearchBar({searchParams, setSearchParams}) {
                 Filter  
             </button> : 
                 
-                
                 <FilterMenuModal 
                     isModalOpen={isModalOpen} 
                     setIsModalOpen={setIsModalOpen}
                     searchParams={searchParams} 
                     setSearchParams={setSearchParams}
                     propertyTypeQuery={propertyTypeQuery}
-                    setPropertyTypeQuery={setPropertyTypeQuery}/>
-                    
-                      
-                    
-                    } 
+                    setPropertyTypeQuery={setPropertyTypeQuery}/> 
+                } 
         </div>
     )
 };

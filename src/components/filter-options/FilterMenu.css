@@ -25,10 +25,6 @@
     margin: 10px;
 }
 
-.apply-filters-button-container {
-    position: sticky; 
-}
-
 .apply-filters-button {
     width: 93%;
     height: 25px;
@@ -42,7 +38,8 @@
     text-align: center;
 }
 
-.property-type-filter-container > p {
+.property-type-filter-container > p, 
+.price-range-slider-container > p {
     color: rgb(44, 44, 50);
     font-weight: bold;
     margin-top: 0px;

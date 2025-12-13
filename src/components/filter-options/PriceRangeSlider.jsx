@@ -1,17 +1,19 @@
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
 import {useState} from 'react';
+import './SortByDropdown.css';
 
 function PriceRangeSlider({setPriceQuery}) {
     const [priceValues, setPriceValues] = useState([0, 550])
 
     const handleChange = (event, newValue) => {
-        setPriceValues(newValue)
-        setPriceQuery(priceValues)
-    }
+        setPriceValues(newValue);
+        setPriceQuery(priceValues);
+    };
 
     return (
         <div className="price-range-slider-container">
+            <p>Price range</p>
             <Box sx={{width: 250}}>
                 <Slider
                     value={priceValues}

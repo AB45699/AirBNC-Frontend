@@ -1,6 +1,7 @@
 import {getProperties} from "../../../api.js";
 import PropertyCard from "./PropertyCard.jsx";
 import {useEffect, useState} from "react";
+import './PropertiesGrid.css';
 
 function PropertiesGrid({searchParams}) {
     const [allProperties, setAllProperties] = useState([]);

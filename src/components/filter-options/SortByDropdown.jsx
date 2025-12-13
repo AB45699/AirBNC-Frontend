@@ -3,7 +3,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import {useState} from 'react';
-import './sortByDropdown.css';
+import './SortByDropdown.css';
 
 function SortByDropdown({searchParams, setSearchParams}) {
     const [sortValue, setSortValue] = useState("Most favourited");
@@ -13,10 +13,11 @@ function SortByDropdown({searchParams, setSearchParams}) {
     };
 
     const setSortOrder = (sortOrder, sortBy) => {
-        const newParams = new URLSearchParams(searchParams)
+        const newParams = new URLSearchParams(searchParams);
+
         newParams.set("order", sortOrder);
-        newParams.set("sort", sortBy)
-        setSearchParams(newParams)
+        newParams.set("sort", sortBy);
+        setSearchParams(newParams);
     };
 
     const sortOptions = [
