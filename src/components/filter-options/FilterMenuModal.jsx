@@ -33,7 +33,7 @@ function FilterMenuModal( {isModalOpen, setIsModalOpen, searchParams, setSearchP
             <Slide direction="left" in={isModalOpen} mountOnEnter unmountOnExit>
 
                 <div className="filter-menu-modal">
-                    <button className="close-modal-button" onClick={closeModal} >
+                    <button type="button" className="close-modal-button" onClick={closeModal} >
                         <img className="close-icon" src={closeButton} alt="close=button"/>
                     </button>
 
@@ -44,7 +44,7 @@ function FilterMenuModal( {isModalOpen, setIsModalOpen, searchParams, setSearchP
                         propertyTypeQuery={propertyTypeQuery} 
                         setPropertyTypeQuery={setPropertyTypeQuery}/>
             
-                    <button className="apply-filters-button" onClick={()=>{setFilterQueries(propertyTypeQuery, priceQuery)}}>
+                    <button type="button" className="apply-filters-button" onClick={()=>{setFilterQueries(propertyTypeQuery, priceQuery)}}>
                         Apply filters
                     </button>
                 
