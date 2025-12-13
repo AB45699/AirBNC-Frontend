@@ -4,7 +4,8 @@ import Slide from '@mui/material/Slide';
 import PropertyTypeFilters from './PropertyTypeFilters.jsx';
 import PriceRangeSlider from './PriceRangeSlider.jsx';
 import {useState} from 'react';
-import closeButton from '../../assets/close-button.png';
+import CloseButton from '../CloseButton.jsx';
+
 
 function FilterMenuModal( {isModalOpen, setIsModalOpen, searchParams, setSearchParams, propertyTypeQuery, setPropertyTypeQuery} ) {
     const [priceQuery, setPriceQuery] = useState([0, 550]);
@@ -33,9 +34,7 @@ function FilterMenuModal( {isModalOpen, setIsModalOpen, searchParams, setSearchP
             <Slide direction="left" in={isModalOpen} mountOnEnter unmountOnExit>
 
                 <div className="filter-menu-modal">
-                    <button type="button" className="close-modal-button" onClick={closeModal} >
-                        <img className="close-icon" src={closeButton} alt="close=button"/>
-                    </button>
+                    <CloseButton closeModal={closeModal}/>
 
                     <PriceRangeSlider 
                         setPriceQuery={setPriceQuery}/>
