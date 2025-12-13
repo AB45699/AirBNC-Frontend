@@ -27,7 +27,7 @@ function PropertiesGrid({searchParams}) {
     };
 
     useEffect(()=>{
-        fetchProperties(orderQuery, sortByQuery, propertyTypeQuery, minPriceQuery, maxPriceQuery);
+        fetchProperties();
     }, [orderQuery, sortByQuery, propertyTypeQuery, minPriceQuery, maxPriceQuery])
 
     if (isLoading) {
