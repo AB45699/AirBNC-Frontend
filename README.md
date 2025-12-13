@@ -6,6 +6,8 @@ AirBNC is a browser-based application. This is the Front-end, created with React
 
 **Link to the back-end repo**: https://github.com/AB45699/AirBNC 
 
+**Link to hosted back-end**: https://airbnc-oijh.onrender.com/ (❗if the page is 'Loading...' too long, please click here to wake up the server)
+
 # 🚀 How it is made
 
 **Tech used**: JavaScript, HTML, CSS, React (Vite), Axios, React-Router (useSearchParams); hosted on Netlify 
