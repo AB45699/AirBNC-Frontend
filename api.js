@@ -17,3 +17,11 @@ export const getProperties = async (orderQuery, sortByQuery, propertyTypeQuery, 
   
     return allProperties;
 };
+
+export const getSingleProperty = async (property_id) => {
+    const singlePropertyURL = `https://airbnc-oijh.onrender.com/api/properties/${property_id}`;
+
+    const {data: {property}} = await axios.get(singlePropertyURL);
+
+    return property;
+}
