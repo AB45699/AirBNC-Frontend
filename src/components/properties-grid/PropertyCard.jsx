@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 function PropertyCard( {property} ) {
     return (
-        <Link to="/properties/:property_id">
+        <Link to={`/properties/${property.property_id}`}>
             <div className="property-card">
 
                 <div className="property-card-image-wrapper">
