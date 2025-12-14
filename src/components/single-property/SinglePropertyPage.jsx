@@ -2,6 +2,9 @@ import { useParams } from 'react-router-dom';
 import { getSingleProperty } from '../../../api.js';
 import {useEffect, useState} from 'react';
 import './SingleProperty.css';
+import CloseButton from '../CloseButton.jsx';
+import {Link} from 'react-router-dom';
+import PropertyDescription from './PropertyDescription.jsx';
 
 function SinglePropertyPage() {
     const {property_id} = useParams();
@@ -30,7 +33,11 @@ function SinglePropertyPage() {
     }
 
     return (
-        <div className="single-property-images">Images carousel placeholder</div>
+        <>
+            <div className="single-property-images">Images carousel placeholder</div>
+
+            <PropertyDescription property={property}/>
+        </>
     )
 }
 

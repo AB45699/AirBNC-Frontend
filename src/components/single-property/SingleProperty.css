@@ -3,4 +3,12 @@
     border-color: red;
     height: 40vh;
     width: 95vw;
+    position: relative;
+}
+
+.property-name-card {
+    border-style: solid;
+    border-color: blue;
+    display: block;
+ 
 }

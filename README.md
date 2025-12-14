@@ -35,11 +35,15 @@ Further features include:
 
 * Filter changes instantly update the displayed results, without needing to reload the page! 
 
+# 🔨 Current updates
+
+Each property can now be clicked on to take you to an individual proeprty page. This is being developed at the moment.
+
 # 🏗️ To do - work in progress!
 
 **Status**: project in development.
 
-* Further endpoints from the back-end are still to be implemented. Example: clicking on a property card takes users to a single property page view. 
+* Further endpoints from the back-end are still to be implemented. Example: clicking on a property card takes users to a single property page view (in development). 
 
 * Users being able to post reviews. 
 
