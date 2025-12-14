@@ -21,7 +21,7 @@
     }
 }
 
-.close-modal-button {
+.close-button {
     margin: 10px;
 }
 
@@ -104,17 +104,3 @@
     border-width: 1.5px;
 }
 
-.close-modal-button {
-    display: flex;
-    height: 35px;
-    width: 40px;
-    justify-content: center;
-    align-items: center;
-    background: transparent;
-    border-style: none;
-    
-}
-
-.close-icon {
-    height: 30px;
-}
