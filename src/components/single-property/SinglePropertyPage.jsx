@@ -5,6 +5,7 @@ import './SingleProperty.css';
 import CloseButton from '../CloseButton.jsx';
 import {Link} from 'react-router-dom';
 import PropertyDescription from './PropertyDescription.jsx';
+import ImagesCarousel from './ImagesCarousel.jsx';
 
 function SinglePropertyPage() {
     const {property_id} = useParams();
@@ -34,8 +35,7 @@ function SinglePropertyPage() {
 
     return (
         <>
-            <div className="single-property-images">Images carousel placeholder</div>
-
+            <ImagesCarousel />
             <PropertyDescription property={property}/>
         </>
     )
