@@ -6,7 +6,8 @@ import './Header.css';
 
 function SearchBar({searchParams, setSearchParams}) { 
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [propertyTypeQuery, setPropertyTypeQuery] = useState(null);
+    const currentPropertyTypeQuery = searchParams.get("property_type");
+    const [propertyTypeQuery, setPropertyTypeQuery] = useState(currentPropertyTypeQuery || null);
 
     function openModal() {
         setIsModalOpen(true);
