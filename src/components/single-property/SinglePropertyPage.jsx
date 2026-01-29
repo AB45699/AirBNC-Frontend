@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom';
 import { getSingleProperty } from '../../../api.js';
 import {useEffect, useState} from 'react';
 import './SingleProperty.css';
-import PropertyDescription from './PropertyDescription.jsx';
+import PropertyDetailsCard from './PropertyDetailsCard.jsx';
 import ImagesCarousel from './ImagesCarousel.jsx';
 
 function SinglePropertyPage() {
@@ -34,7 +34,7 @@ function SinglePropertyPage() {
     return (
         <>
             <ImagesCarousel property={property}/>
-            <PropertyDescription property={property}/>
+            <PropertyDetailsCard property={property}/>
         </>
     )
 }
