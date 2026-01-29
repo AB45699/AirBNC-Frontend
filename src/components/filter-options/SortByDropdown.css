@@ -1,10 +1,15 @@
 .MuiInputBase-root.MuiOutlinedInput-root.MuiSelect-root,
 .MuiButtonBase-root.MuiMenuItem-root {
     font-size: 14px;
+    font-family: "AirbnbRegular"
 }
 
 .MuiSelect-root {
     height: 30px;
+}
+
+.MuiFormLabel-root.MuiInputLabel-root {
+    font-family: "AirbnbRegular"
 }
 
 .MuiFormControl-root {

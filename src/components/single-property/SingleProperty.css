@@ -9,8 +9,15 @@
 .property-name-card {
     border-style: solid;
     border-color: blue;
-    display: block;
- 
+    border-radius: 25px;
+    margin-top: 5px;
+    position: relative;
+    background-color: white;
+}
+
+.property-details-property-name {
+    font-size: 20px;
+    font-weight: bolder;
 }
 
 .embla__viewport {
