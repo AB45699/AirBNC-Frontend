@@ -35,8 +35,8 @@ function ImagesCarousel( {property} ) {
                 </div>
             </div>
 
-            <button className="embla__prev" onClick={decrementCounter}>Scroll to prev</button>
-            <button className="embla__next" onClick={incrementCounter}>Scroll to next</button>
+            <button className="embla__prev" onClick={decrementCounter}>{`<`}</button>
+            <button className="embla__next" onClick={incrementCounter}>{`>`}</button>
         </div>
     )
 };
