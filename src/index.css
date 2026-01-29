@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "AirbnbRegular";
+  src: local("AirbnbRegular"),
+    url("./fonts/AirbnbCereal_W_Bk.otf") format("opentype");
+}
+
 body { 
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "AirbnbRegular";
 }
