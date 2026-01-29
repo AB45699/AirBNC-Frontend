@@ -4,6 +4,12 @@
     url("./fonts/AirbnbCereal_W_Bk.otf") format("opentype");
 }
 
+@font-face {
+  font-family: "AirbnbLight";
+  src: local("AirbnbLight"),
+    url("./fonts/AirbnbCereal_W_Lt.otf") format("opentype");
+}
+
 body { 
     font-family: "AirbnbRegular";
 }

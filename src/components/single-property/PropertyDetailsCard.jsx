@@ -4,10 +4,10 @@ function PropertyDetailsCard({property}) {
 
     return (
       
-        <div className="property-name-card">
-            <div className="property-details-property-name"> 
-                {property.property_name}
-            </div>
+        <div className="single-property-details">
+            <p className="property-details-property-name"> {property.property_name}</p>
+            <p>Property in {property.location}</p>
+            <p style={{fontFamily:"AirbnbLight", fontSize:13}}>{property.description}</p>
         </div>
         
     )
