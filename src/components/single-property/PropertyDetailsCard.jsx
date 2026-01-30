@@ -1,4 +1,5 @@
 import './SingleProperty.css';
+import HostCard from './HostCard.jsx';
 
 function PropertyDetailsCard({property}) {
 
@@ -12,6 +13,7 @@ function PropertyDetailsCard({property}) {
                 <p className="single-property-details__location">Property in {property.location}</p>
                 <p className="single-property-details__description-text">{property.description}</p>
             </div>  
+            <HostCard property={property}/>
         </div>
         
     )

@@ -13,12 +13,15 @@
 .single-property-details__title {
     font-size: 20px;
     font-weight: bolder;
-    margin-top: 20px;
-    margin-bottom: 5px;
+    margin: 19px 0 9px;
 }
 
 .single-property-details__description {
     color: rgb(75, 74, 74);
+}
+
+.single-property-details__location {
+    margin: 9px;
 }
 
 .single-property-details__description-text {
@@ -74,4 +77,24 @@
 
 .embla {
     position: relative;
+}
+
+.single-property-details__host {
+    border: 5px rgb(209, 208, 208);
+    border-style: solid none;
+    border-width: 1px;
+    padding: 3px;
+    display: flex;
+}
+
+.single-property-details__host-avatar {
+    clip-path: circle();
+    height: 50px;
+    margin-left: 10px;
+}
+
+.single-property-details__host-name {
+    margin-left: 20px;
+    font-weight: bold;
+    color: rgb(54, 54, 54);
 }
