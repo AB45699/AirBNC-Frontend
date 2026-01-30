@@ -85,6 +85,7 @@
     border-width: 1px;
     padding: 3px;
     display: flex;
+    margin-bottom: 19px;
 }
 
 .single-property-details__host-avatar {
