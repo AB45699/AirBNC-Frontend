@@ -31,7 +31,7 @@ function ImagesCarousel( {property} ) {
         <div className="embla">
             <div className="embla__viewport" ref={emblaRef}>
                 <div className="embla__container">
-                    <div className="embla__slide"><img className="single-property-image" src={propertyImages[counter]}/></div>
+                    <div className="embla__slide"><img className="embla__image" src={propertyImages[counter]}/></div>
                 </div>
             </div>
 
