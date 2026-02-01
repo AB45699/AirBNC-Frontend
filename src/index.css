@@ -10,6 +10,12 @@
     url("./fonts/AirbnbCereal_W_Lt.otf") format("opentype");
 }
 
+@font-face {
+  font-family: "AirbnbMed";
+  src: local("AirbnbMed"),
+    url("./fonts/AirbnbCereal_W_Md.otf") format("opentype");
+}
+
 body { 
     font-family: "AirbnbRegular";
 }

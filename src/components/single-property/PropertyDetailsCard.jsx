@@ -1,5 +1,6 @@
 import './SingleProperty.css';
 import HostCard from './HostCard.jsx';
+import ReviewSummary from './ReviewSummary.jsx';
 
 function PropertyDetailsCard({property}) {
 
@@ -14,6 +15,7 @@ function PropertyDetailsCard({property}) {
                 <p className="single-property-details__description-text">{property.description}</p>
             </div>  
             <HostCard property={property}/>
+            <ReviewSummary property={property}/>
         </div>
         
     )

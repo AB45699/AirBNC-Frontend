@@ -99,3 +99,31 @@
     font-weight: bold;
     color: rgb(54, 54, 54);
 }
+
+.single-property-details__review {
+    display: flex;
+    font-family: "AirbnbMed";
+    font-size: 30px;
+    justify-content: center;
+    margin-bottom: 13px;
+}
+
+.single-property-details__review-average {
+    border-right: 1.5px rgb(209, 208, 208);
+    border-style: none solid none none;
+    margin-right: 10px;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.single-property-details__gold-star {
+    height: 17px;
+    margin-left: 5px;
+    position: relative;
+}
+
+.single-property-details__count-text {
+    font-size: 15px;
+}
