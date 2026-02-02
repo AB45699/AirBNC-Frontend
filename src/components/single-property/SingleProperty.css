@@ -118,12 +118,15 @@
     align-items: center;
 }
 
+.single-property-details__stars {
+    display: flex;
+    flex-direction: row;
+}
+
 .single-property-details__gold-star {
-    height: 17px;
-    margin-left: 5px;
-    position: relative;
+    height: 12px;
 }
 
 .single-property-details__count-text {
-    font-size: 15px;
+    font-size: 13px;
 }

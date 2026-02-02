@@ -1,13 +1,25 @@
-import GoldStar from '../../assets/gold-star-icon.png';
+import GoldStarIcon from './GoldStarIcon.jsx';
 
 function ReviewSummary( {property} ) {
+    const {avg_rating: averageRating} = property;
+
+    function repeatStar() {
+        const repeatedStars = [];
+
+        for (let i=0; i < Math.round(averageRating); i++) {
+            repeatedStars.push(<GoldStarIcon />)
+        };
+
+        return repeatedStars;
+    };
+
     return (
         <div className="single-property-details__review"> 
         { property.review_count !== null ? (
             <>
                 <div className="single-property-details__review-average">
-                    {property.avg_rating}
-                    <img className="single-property-details__gold-star" src={GoldStar} alt="gold star image"/>
+                    {averageRating}
+                    <div className="single-property-details__stars">{repeatStar()}</div>
                 </div>
                 <div className="single-property-details__review-count">
                     {property.review_count}
