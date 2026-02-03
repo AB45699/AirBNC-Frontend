@@ -9,7 +9,7 @@ function PropertyCard( {property} ) {
             <div className="property-card">
 
                 <div className="property-card-image-wrapper">
-                    <FavouritesIcon property={property}/>
+                    <FavouritesIcon numOfFaves={property.favourites}/>
                     <img className="property-card-image" src={property.image} alt="image of property"/>
                 </div>
 
