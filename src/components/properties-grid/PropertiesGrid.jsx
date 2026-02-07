@@ -35,7 +35,7 @@ function PropertiesGrid({searchParams}) {
     };
 
     if (hasErrored) {
-        return <p> {hasErrored?.response?.data?.msg} <br /> Sorry property could not load, please try again! </p>
+        return <p> {hasErrored?.response?.data?.msg} <br /> Sorry properties could not load, please try again! </p>
     };
 
     return (
