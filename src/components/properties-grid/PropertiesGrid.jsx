@@ -32,7 +32,11 @@ function PropertiesGrid({searchParams}) {
 
     if (isLoading) {
         return <p>Loading...</p>
-    }
+    };
+
+    if (hasErrored) {
+        return <p> {hasErrored?.response?.data?.msg} <br /> Sorry property could not load, please try again! </p>
+    };
 
     return (
         <section className="property-cards-container">

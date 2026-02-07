@@ -7,7 +7,7 @@ function ReviewSummary( {property} ) {
         const repeatedStars = [];
 
         for (let i=0; i < Math.round(averageRating); i++) {
-            repeatedStars.push(<GoldStarIcon />)
+            repeatedStars.push(<GoldStarIcon key={`gold-star${i}`}/>)
         };
 
         return repeatedStars;

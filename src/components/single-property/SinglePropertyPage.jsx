@@ -19,6 +19,7 @@ function SinglePropertyPage() {
             setIsLoading(false);
         } catch (err) {
             setHasErrored(err);
+            console.log(err)
             setIsLoading(false);
         }
     };
@@ -29,7 +30,11 @@ function SinglePropertyPage() {
 
     if (isLoading) {
         return <p>Loading...</p>
-    }
+    };
+
+    if (hasErrored) {
+        return <p> {hasErrored?.response?.data?.msg} <br /> Sorry properties could not load, please try again! </p>
+    };
 
     return (
         <>
