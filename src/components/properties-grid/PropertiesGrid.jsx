@@ -3,7 +3,7 @@ import PropertyCard from "./PropertyCard.jsx";
 import './PropertiesGrid.css';
 import {useEffect, useState} from "react";
 
-function PropertiesGrid({searchParams}) {
+function PropertiesGrid({ searchParams }) {
     const [allProperties, setAllProperties] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [hasErrored, setHasErrored] = useState(null);
